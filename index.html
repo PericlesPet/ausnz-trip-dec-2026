@@ -34,68 +34,140 @@ td.n,th.n{text-align:right;white-space:nowrap}
 tr.win td{background:var(--soft);font-weight:600}
 ul{padding-left:20px;margin:8px 0}
 li{margin:4px 0}
+h3{font-size:1rem;margin:22px 0 8px}
+.tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-bottom:16px}
+.tabs button{all:unset;box-sizing:border-box;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:9px 11px;font-size:.9rem}
+.tabs button b,.tabs button span{display:block}
+.tabs button span{color:var(--muted);font-size:.8rem}
+.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tabs button[aria-selected=true]{background:var(--soft);border-color:var(--accent);box-shadow:inset 0 -3px 0 var(--accent)}
+.pick em{display:block;font-style:normal;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--accent)}
+.con{color:var(--muted);font-size:.92rem}
+td.d{white-space:nowrap;font-weight:600}
+a{color:var(--accent)}
 </style>
 </head>
 <body>
 <main>
 <h1>Australia and New Zealand, Dec 4–20</h1>
 <p class="sub">London round trip covering Adelaide, Sydney and New Zealand. Prices checked Nov 2, 2026, in economy; they will move.</p>
-
-<div class="pick">
-<strong>Recommended: Adelaide → Sydney → Queenstown → Te Anau → Queenstown → London</strong>
-Fewest internal flights of the seven routes tested, 14 nights, and the lowest total. Te Anau needs a car, no extra flight, and is the base for Milford Sound.
+<div class="tabs" role="tablist" aria-label="Itineraries"><button role="tab" id="t-adelaide-first" aria-controls="adelaide-first" aria-selected="false" tabindex="-1" data-id="adelaide-first"><b>Adelaide first</b><span>£1,531 flights</span></button><button role="tab" id="t-adelaide-auckland" aria-controls="adelaide-auckland" aria-selected="false" tabindex="-1" data-id="adelaide-auckland"><b>Adelaide first + Auckland</b><span>£1,606 flights</span></button><button role="tab" id="t-nz-first" aria-controls="nz-first" aria-selected="false" tabindex="-1" data-id="nz-first"><b>NZ first</b><span>£1,560 flights</span></button><button role="tab" id="t-auckland-first" aria-controls="auckland-first" aria-selected="false" tabindex="-1" data-id="auckland-first"><b>Auckland first</b><span>£1,575 flights</span></button><button role="tab" id="t-queenstown-auckland" aria-controls="queenstown-auckland" aria-selected="false" tabindex="-1" data-id="queenstown-auckland"><b>NZ first + Auckland</b><span>£1,613 flights</span></button></div>
+<section role="tabpanel" id="adelaide-first" aria-labelledby="t-adelaide-first" tabindex="0">
+<div class="pick"><em>Recommended</em><strong>Adelaide → Sydney → Queenstown → Te Anau → Queenstown → London</strong>Fewest internal flights, lowest total and the most nights in the South Island. Te Anau needs a car, no extra flight, and is the base for Milford Sound.<br><span class="con">Drawback: 1h40 connection in Brisbane on the way home.</span>
 <div class="stats">
-<div class="stat"><b>£1,531</b><span>flights per person ($2,053)</span></div>
-<div class="stat"><b>£3,062</b><span>flights for 2 ($4,106)</span></div>
+<div class="stat"><b>£1,531</b><span>flights per person</span></div>
+<div class="stat"><b>£3,062</b><span>flights for 2</span></div>
 <div class="stat"><b>£2,336</b><span>per person incl. hotels and car</span></div>
-<div class="stat"><b>14</b><span>nights on the ground</span></div>
-</div>
-</div>
-
-<h2>Day by day</h2>
-<div class="scroll"><table>
-<tr><th>Date</th><th>Plan</th></tr>
-<tr><td>Dec 4–5</td><td>Gatwick 8:40am, Qatar via Doha, lands Adelaide 3:55pm Dec 5</td></tr>
-<tr><td>Dec 5–6</td><td>Adelaide, 2 nights</td></tr>
-<tr><td>Dec 7–9</td><td>Fly to Sydney 7:45am (Jetstar, A$128). Sydney, 3 nights</td></tr>
-<tr><td>Dec 10–12</td><td>Fly to Queenstown (Jetstar, A$346). Queenstown, 3 nights</td></tr>
-<tr><td>Dec 13–14</td><td>Pick up car, drive to Te Anau, 2 nights. Milford Sound Dec 14</td></tr>
-<tr><td>Dec 15–18</td><td>Back to Queenstown, return car, 4 nights</td></tr>
-<tr><td>Dec 19–20</td><td>Queenstown 7:30pm, via Brisbane and Doha, lands Heathrow 12:15pm Dec 20</td></tr>
-</table></div>
-<p class="note">Option: move the Sydney flight to Dec 8 (same A$128 fare) for a third Adelaide night and 2 Sydney nights, saving about A$101 per room.</p>
-
-<h2>Route comparison, per person</h2>
+<div class="stat"><b>14</b><span>nights, 2 internal flights</span></div>
+</div></div>
+<h3>Day by day</h3><div class="scroll"><table><tr><th>Date</th><th>Plan</th></tr><tr><td class="d">Dec 4–5</td><td>Gatwick 8:40am, Qatar via Doha, lands Adelaide 3:55pm Dec 5</td></tr><tr><td class="d">Dec 5–6</td><td>Adelaide, 2 nights</td></tr><tr><td class="d">Dec 7–9</td><td>Fly to Sydney 7:45am (Jetstar, A$128). Sydney, 3 nights</td></tr><tr><td class="d">Dec 10–12</td><td>Fly to Queenstown (Jetstar, A$346). Queenstown, 3 nights</td></tr><tr><td class="d">Dec 13–14</td><td>Pick up car, drive to Te Anau, 2 nights. Milford Sound Dec 14</td></tr><tr><td class="d">Dec 15–18</td><td>Back to Queenstown, return car, 4 nights</td></tr><tr><td class="d">Dec 19–20</td><td>Queenstown 7:30pm, via Brisbane and Doha, lands Heathrow 12:15pm Dec 20</td></tr></table></div>
+<h3>Cost per person</h3><div class="scroll"><table>
+<tr><td>Long-haul</td><td class="n">£1,193</td></tr>
+<tr><td>Internal fares</td><td class="n">A$474 (£249)</td></tr>
+<tr><td>Internal checked bags (estimate)</td><td class="n">A$169 (£89)</td></tr>
+<tr class="win"><td>Flights total</td><td class="n">£1,531</td></tr>
+<tr><td>Hotels, 2 sharing (estimate)</td><td class="n">£769</td></tr>
+<tr><td>Car (estimate)</td><td class="n">£37</td></tr>
+<tr class="win"><td>Full total</td><td class="n">£2,336</td></tr>
+</table></div></section><section role="tabpanel" id="adelaide-auckland" aria-labelledby="t-adelaide-auckland" tabindex="0">
+<div class="pick"><em>Best fit for Hobbiton</em><strong>Adelaide → Sydney → Auckland → Queenstown → Te Anau → Queenstown → London</strong>Adds Auckland and a possible Hobbiton day for £26 more in the full total.<br><span class="con">Drawback: An extra flight, only 6 South Island nights, and the car return falls on the Dec 17 price step.</span>
+<div class="stats">
+<div class="stat"><b>£1,606</b><span>flights per person</span></div>
+<div class="stat"><b>£3,212</b><span>flights for 2</span></div>
+<div class="stat"><b>£2,362</b><span>per person incl. hotels and car</span></div>
+<div class="stat"><b>14</b><span>nights, 3 internal flights</span></div>
+</div></div>
+<h3>Day by day</h3><div class="scroll"><table><tr><th>Date</th><th>Plan</th></tr><tr><td class="d">Dec 4–5</td><td>Gatwick 8:40am, Qatar via Doha, lands Adelaide 3:55pm Dec 5</td></tr><tr><td class="d">Dec 5–6</td><td>Adelaide, 2 nights</td></tr><tr><td class="d">Dec 7–9</td><td>Fly to Sydney (A$128). Sydney, 3 nights</td></tr><tr><td class="d">Dec 10–12</td><td>Fly to Auckland (A$305). Auckland, 3 nights, with room for Hobbiton</td></tr><tr><td class="d">Dec 13–14</td><td>Fly to Queenstown (A$117). Queenstown, 2 nights</td></tr><tr><td class="d">Dec 15–16</td><td>Pick up car, drive to Te Anau, 2 nights. Milford Sound Dec 16</td></tr><tr><td class="d">Dec 17–18</td><td>Back to Queenstown, return car, 2 nights</td></tr><tr><td class="d">Dec 19–20</td><td>Queenstown 7:30pm, via Brisbane and Doha, lands Heathrow 12:15pm Dec 20</td></tr></table></div>
+<h3>Cost per person</h3><div class="scroll"><table>
+<tr><td>Long-haul</td><td class="n">£1,193</td></tr>
+<tr><td>Internal fares</td><td class="n">A$550 (£289)</td></tr>
+<tr><td>Internal checked bags (estimate)</td><td class="n">A$236 (£124)</td></tr>
+<tr class="win"><td>Flights total</td><td class="n">£1,606</td></tr>
+<tr><td>Hotels, 2 sharing (estimate)</td><td class="n">£720</td></tr>
+<tr><td>Car (estimate)</td><td class="n">£37</td></tr>
+<tr class="win"><td>Full total</td><td class="n">£2,362</td></tr>
+</table></div></section><section role="tabpanel" id="nz-first" aria-labelledby="t-nz-first" tabindex="0">
+<div class="pick"><em>Ends at the Adelaide Test</em><strong>Queenstown → Te Anau → Queenstown → Sydney → Adelaide → London</strong>Sydney falls on its cheaper nights, and Adelaide overlaps Test days 2 and 3 (Dec 18–19) before a 10:00pm flight home. Test tickets were not priced.<br><span class="con">Drawback: 33h15 journey out and one night fewer.</span>
+<div class="stats">
+<div class="stat"><b>£1,560</b><span>flights per person</span></div>
+<div class="stat"><b>£3,120</b><span>flights for 2</span></div>
+<div class="stat"><b>£2,375</b><span>per person incl. hotels and car</span></div>
+<div class="stat"><b>13</b><span>nights, 2 internal flights</span></div>
+</div></div>
+<h3>Day by day</h3><div class="scroll"><table><tr><th>Date</th><th>Plan</th></tr><tr><td class="d">Dec 4–6</td><td>London, via Doha (7h) and Sydney (2h25), 33h15, lands Queenstown 2:15pm Dec 6</td></tr><tr><td class="d">Dec 6–9</td><td>Queenstown, 4 nights</td></tr><tr><td class="d">Dec 10–11</td><td>Pick up car, drive to Te Anau, 2 nights. Milford Sound Dec 11</td></tr><tr><td class="d">Dec 12–13</td><td>Back to Queenstown, return car, 2 nights</td></tr><tr><td class="d">Dec 14–16</td><td>Fly to Sydney (Virgin, A$312). Sydney, 3 nights</td></tr><tr><td class="d">Dec 17–18</td><td>Fly to Adelaide (Virgin, A$159). Adelaide, 2 nights</td></tr><tr><td class="d">Dec 19–20</td><td>Adelaide 10:00pm, lands Heathrow 12:15pm Dec 20</td></tr></table></div>
+<h3>Cost per person</h3><div class="scroll"><table>
+<tr><td>Long-haul</td><td class="n">£1,224</td></tr>
+<tr><td>Internal fares</td><td class="n">A$471 (£247)</td></tr>
+<tr><td>Internal checked bags (estimate)</td><td class="n">A$169 (£89)</td></tr>
+<tr class="win"><td>Flights total</td><td class="n">£1,560</td></tr>
+<tr><td>Hotels, 2 sharing (estimate)</td><td class="n">£778</td></tr>
+<tr><td>Car (estimate)</td><td class="n">£37</td></tr>
+<tr class="win"><td>Full total</td><td class="n">£2,375</td></tr>
+</table></div></section><section role="tabpanel" id="auckland-first" aria-labelledby="t-auckland-first" tabindex="0">
+<div class="pick"><em>Lowest long-haul fare</em><strong>Auckland → Queenstown → Te Anau → Queenstown → Sydney → Adelaide → London</strong>Has the cheapest long-haul fare and starts in Auckland, with a possible Hobbiton day.<br><span class="con">Drawback: Lands in Auckland at 12:25am Dec 6, so the first paid night is mostly lost. Hobbiton would fall early, during jet lag.</span>
+<div class="stats">
+<div class="stat"><b>£1,575</b><span>flights per person</span></div>
+<div class="stat"><b>£3,150</b><span>flights for 2</span></div>
+<div class="stat"><b>£2,375</b><span>per person incl. hotels and car</span></div>
+<div class="stat"><b>14</b><span>nights, 3 internal flights</span></div>
+</div></div>
+<h3>Day by day</h3><div class="scroll"><table><tr><th>Date</th><th>Plan</th></tr><tr><td class="d">Dec 4–6</td><td>Heathrow, lands Auckland 12:25am Dec 6</td></tr><tr><td class="d">Dec 5–7</td><td>Auckland, 3 paid nights</td></tr><tr><td class="d">Dec 8–10</td><td>Fly to Queenstown (A$77). Queenstown, 3 nights</td></tr><tr><td class="d">Dec 11–12</td><td>Pick up car, drive to Te Anau, 2 nights. Milford Sound Dec 12</td></tr><tr><td class="d">Dec 13</td><td>Back to Queenstown, return car, 1 night</td></tr><tr><td class="d">Dec 14–16</td><td>Fly to Sydney (Virgin, A$312). Sydney, 3 nights</td></tr><tr><td class="d">Dec 17–18</td><td>Fly to Adelaide (Virgin, A$159). Adelaide, 2 nights</td></tr><tr><td class="d">Dec 19–20</td><td>Adelaide 10:00pm, lands Heathrow 12:15pm Dec 20</td></tr></table></div>
+<h3>Cost per person</h3><div class="scroll"><table>
+<tr><td>Long-haul</td><td class="n">£1,163</td></tr>
+<tr><td>Internal fares</td><td class="n">A$548 (£288)</td></tr>
+<tr><td>Internal checked bags (estimate)</td><td class="n">A$236 (£124)</td></tr>
+<tr class="win"><td>Flights total</td><td class="n">£1,575</td></tr>
+<tr><td>Hotels, 2 sharing (estimate)</td><td class="n">£764</td></tr>
+<tr><td>Car (estimate)</td><td class="n">£37</td></tr>
+<tr class="win"><td>Full total</td><td class="n">£2,375</td></tr>
+</table></div></section><section role="tabpanel" id="queenstown-auckland" aria-labelledby="t-queenstown-auckland" tabindex="0">
+<div class="pick"><em>Hobbiton mid-trip</em><strong>Queenstown → Te Anau → Auckland → Sydney → Adelaide → London</strong>Covers both NZ islands in one direction, with Hobbiton in the middle of the trip and Sydney on its cheaper nights.<br><span class="con">Drawback: 33h15 journey out, one night fewer, and an extra flight.</span>
+<div class="stats">
+<div class="stat"><b>£1,613</b><span>flights per person</span></div>
+<div class="stat"><b>£3,226</b><span>flights for 2</span></div>
+<div class="stat"><b>£2,368</b><span>per person incl. hotels and car</span></div>
+<div class="stat"><b>13</b><span>nights, 3 internal flights</span></div>
+</div></div>
+<h3>Day by day</h3><div class="scroll"><table><tr><th>Date</th><th>Plan</th></tr><tr><td class="d">Dec 4–6</td><td>London, via Doha (7h) and Sydney (2h25), 33h15, lands Queenstown 2:15pm Dec 6</td></tr><tr><td class="d">Dec 6–8</td><td>Queenstown, 3 nights</td></tr><tr><td class="d">Dec 9–10</td><td>Pick up car, drive to Te Anau, 2 nights. Milford Sound Dec 10</td></tr><tr><td class="d">Dec 11–13</td><td>Return car at Queenstown, fly to Auckland (A$125). Auckland, 3 nights, with room for Hobbiton</td></tr><tr><td class="d">Dec 14–16</td><td>Fly to Sydney (A$221). Sydney, 3 nights</td></tr><tr><td class="d">Dec 17–18</td><td>Fly to Adelaide (Virgin, A$159). Adelaide, 2 nights</td></tr><tr><td class="d">Dec 19–20</td><td>Adelaide 10:00pm, lands Heathrow 12:15pm Dec 20</td></tr></table></div>
+<h3>Cost per person</h3><div class="scroll"><table>
+<tr><td>Long-haul</td><td class="n">£1,224</td></tr>
+<tr><td>Internal fares</td><td class="n">A$505 (£265)</td></tr>
+<tr><td>Internal checked bags (estimate)</td><td class="n">A$236 (£124)</td></tr>
+<tr class="win"><td>Flights total</td><td class="n">£1,613</td></tr>
+<tr><td>Hotels, 2 sharing (estimate)</td><td class="n">£718</td></tr>
+<tr><td>Car (estimate)</td><td class="n">£37</td></tr>
+<tr class="win"><td>Full total</td><td class="n">£2,368</td></tr>
+</table></div></section>
+<h2>All routes, per person</h2>
 <div class="scroll"><table>
 <tr><th>Route</th><th class="n">Nights</th><th class="n">Internal flights</th><th class="n">Flights + bags</th><th class="n">For 2</th><th class="n">Full total*</th></tr>
-<tr class="win"><td>Adelaide, Sydney, Queenstown, Te Anau, Queenstown</td><td class="n">14</td><td class="n">2</td><td class="n">£1,531</td><td class="n">£3,062</td><td class="n">£2,336</td></tr>
-<tr><td>Adelaide, Sydney, Auckland, Queenstown, Te Anau, Queenstown</td><td class="n">14</td><td class="n">3</td><td class="n">£1,606</td><td class="n">£3,212</td><td class="n">£2,362</td></tr>
-<tr><td>Queenstown, Te Anau, Queenstown, Sydney, Adelaide</td><td class="n">13</td><td class="n">2</td><td class="n">£1,560</td><td class="n">£3,120</td><td class="n">£2,375</td></tr>
-<tr><td>Auckland, Queenstown, Te Anau, Queenstown, Sydney, Adelaide</td><td class="n">14</td><td class="n">3</td><td class="n">£1,575</td><td class="n">£3,150</td><td class="n">£2,375</td></tr>
-<tr><td>Queenstown, Te Anau, Auckland, Sydney, Adelaide</td><td class="n">13</td><td class="n">3</td><td class="n">£1,613</td><td class="n">£3,226</td><td class="n">£2,368</td></tr>
-</table></div>
-<p class="note">*Long-haul, internal flights, one checked bag, mid-range hotels with 2 sharing, and car. Food and activities are extra. All routes land in London on Dec 20 at 12:15pm. The £146 spread across all seven routes is smaller than the error in the hotel and car estimates.</p>
-
-<h2>Flight costs, recommended route vs. adding Auckland</h2>
-<div class="scroll"><table>
-<tr><th>Per person</th><th class="n">Recommended</th><th class="n">With Auckland</th></tr>
-<tr><td>Long-haul (Gatwick out, Heathrow back)</td><td class="n">£1,193</td><td class="n">£1,193</td></tr>
-<tr><td>Internal fares</td><td class="n">A$474 (£249)</td><td class="n">A$550 (£289)</td></tr>
-<tr><td>Internal checked bags (estimate)</td><td class="n">A$169 (£89)</td><td class="n">A$236 (£124)</td></tr>
-<tr class="win"><td>Total</td><td class="n">£1,531</td><td class="n">£1,606</td></tr>
-</table></div>
-
+<tr class=win><td><a href="#adelaide-first">Adelaide first</a></td><td class="n">14</td><td class="n">2</td><td class="n">£1,531</td><td class="n">£3,062</td><td class="n">£2,336</td></tr><tr><td><a href="#adelaide-auckland">Adelaide first + Auckland</a></td><td class="n">14</td><td class="n">3</td><td class="n">£1,606</td><td class="n">£3,212</td><td class="n">£2,362</td></tr><tr><td><a href="#nz-first">NZ first</a></td><td class="n">13</td><td class="n">2</td><td class="n">£1,560</td><td class="n">£3,120</td><td class="n">£2,375</td></tr><tr><td><a href="#auckland-first">Auckland first</a></td><td class="n">14</td><td class="n">3</td><td class="n">£1,575</td><td class="n">£3,150</td><td class="n">£2,375</td></tr><tr><td><a href="#queenstown-auckland">NZ first + Auckland</a></td><td class="n">13</td><td class="n">3</td><td class="n">£1,613</td><td class="n">£3,226</td><td class="n">£2,368</td></tr></table></div>
+<p class="note">*Long-haul, internal flights, one checked bag, mid-range hotels with 2 sharing, and car. Food and activities are extra. All routes land in London on Dec 20 at 12:15pm. The spread is smaller than the error in the hotel and car estimates.</p>
 <h2>Hobbiton</h2>
-<p>Hobbiton is the Lord of the Rings film set in Matamata on the North Island, about 2 hours from Auckland. The standard tour is NZ$130 and takes 2.5 hours. Seeing it adds £75 per person in flights and costs 3 South Island nights. A slot for the dates is not confirmed.</p>
-
+<p>Hobbiton is the Lord of the Rings film set in Matamata on the North Island, about 2 hours from Auckland. The standard tour is NZ$130 and takes 2.5 hours. A slot for the dates is not confirmed.</p>
 <h2>Check before booking</h2>
 <ul>
-<li>Homebound connection in Brisbane is 1h40, on one ticket.</li>
 <li>The internal flights are separate tickets, so a delay on one is not protected.</li>
-<li>Hotel and car figures are estimates. The internal fares were not tested for 2 seats.</li>
+<li>Hotel and car figures are estimates. The internal fares were not all tested for 2 seats.</li>
 <li>Jetstar fares exclude overhead bin access. Qatar's bag allowance was not checked.</li>
 <li>Entry rules depend on passport.</li>
 </ul>
 </main>
+<script>
+(function(){
+var tabs=[].slice.call(document.querySelectorAll('[role=tab]')),panels=[].slice.call(document.querySelectorAll('[role=tabpanel]'));
+function show(id,focus){
+ if(!tabs.some(function(t){return t.dataset.id===id}))id=tabs[0].dataset.id;
+ tabs.forEach(function(t){var on=t.dataset.id===id;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;if(on&&focus)t.focus()});
+ panels.forEach(function(p){p.hidden=p.id!==id});
+}
+tabs.forEach(function(t,i){
+ t.addEventListener('click',function(){history.replaceState(null,'','#'+t.dataset.id);show(t.dataset.id)});
+ t.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(d){e.preventDefault();var n=tabs[(i+d+tabs.length)%tabs.length];history.replaceState(null,'','#'+n.dataset.id);show(n.dataset.id,true)}});
+});
+addEventListener('hashchange',function(){show(location.hash.slice(1));scrollTo(0,0)});
+show(location.hash.slice(1));
+})();
+</script>
 </body>
 </html>
